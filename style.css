@@ -1,0 +1,787 @@
+/* =========================================================
+   ERIK LEAL - STUDENT BUSINESS CARD
+   SHARYLAND NORTH JUNIOR HIGH
+   RED / BLACK / WHITE / GRAY DESIGN
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   BASIC RESET
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------------------------------------------------------
+   PAGE
+   --------------------------------------------------------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717 0%,
+            #292929 50%,
+            #111111 100%
+        );
+
+    min-height: 100vh;
+
+    padding: 50px 20px;
+
+    color: #202020;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN BUSINESS CARD
+   --------------------------------------------------------- */
+
+.business-card {
+    width: 100%;
+    max-width: 950px;
+
+    margin: auto;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.55);
+
+    border: 1px solid #555;
+}
+
+
+/* ---------------------------------------------------------
+   RED TOP ACCENT
+   --------------------------------------------------------- */
+
+.business-card::before {
+    content: "";
+
+    display: block;
+
+    height: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8d0712,
+            #c8102e,
+            #ed1c24,
+            #c8102e,
+            #8d0712
+        );
+}
+
+
+/* ---------------------------------------------------------
+   HERO / HEADER
+   --------------------------------------------------------- */
+
+.hero {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 45px 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717,
+            #292929
+        );
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* Decorative red diagonal shape */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    background: #c8102e;
+
+    right: -180px;
+    top: -170px;
+
+    transform: rotate(45deg);
+
+    opacity: 0.9;
+}
+
+
+/* Another decorative shape */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 12px;
+
+    background: #c8102e;
+
+    right: 80px;
+    bottom: 25px;
+
+    transform: rotate(-15deg);
+}
+
+
+/* ---------------------------------------------------------
+   SCHOOL LOGO
+   --------------------------------------------------------- */
+
+.hero-logo {
+
+    width: 190px;
+    height: 190px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    border: 5px solid #c8102e;
+
+    box-shadow:
+        0 0 0 4px white,
+        0 10px 30px rgba(0, 0, 0, 0.45);
+
+    flex-shrink: 0;
+
+    z-index: 2;
+}
+
+
+.hero-logo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------------
+   HERO TEXT
+   --------------------------------------------------------- */
+
+.hero-text {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.school-name {
+
+    color: #d5d5d5;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(42px, 7vw, 76px);
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+    font-weight: 900;
+
+    color: white;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #ed1c24;
+}
+
+
+.red-line {
+
+    width: 100px;
+
+    height: 5px;
+
+    background: #ed1c24;
+
+    margin: 18px 0;
+}
+
+
+.student-title {
+
+    font-size: 15px;
+
+    letter-spacing: 7px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+
+/* ---------------------------------------------------------
+   PROFILE SECTION
+   --------------------------------------------------------- */
+
+.profile-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 40px 55px;
+
+    border-bottom: 1px solid #ddd;
+
+    background: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   PROFILE PHOTO
+   --------------------------------------------------------- */
+
+.profile-photo-container {
+
+    flex-shrink: 0;
+
+    position: relative;
+}
+
+
+.profile-photo {
+
+    width: 170px;
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    outline: 5px solid #c8102e;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.intro {
+
+    max-width: 600px;
+}
+
+
+.welcome {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: #c8102e;
+
+    margin-bottom: 8px;
+}
+
+
+.intro h2 {
+
+    font-size: 32px;
+
+    color: #222;
+
+    margin-bottom: 12px;
+}
+
+
+.intro > p:last-child {
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMATION GRID
+   --------------------------------------------------------- */
+
+.information-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #eeeeee;
+
+    gap: 1px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMATION BOXES
+   --------------------------------------------------------- */
+
+.info-box {
+
+    position: relative;
+
+    background: white;
+
+    padding: 35px 40px;
+
+    min-height: 220px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.info-box:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+
+    z-index: 2;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION NUMBER
+   --------------------------------------------------------- */
+
+.section-number {
+
+    color: #c8102e;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION HEADINGS
+   --------------------------------------------------------- */
+
+.info-box h3 {
+
+    color: #222;
+
+    font-size: 21px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+
+    position: relative;
+}
+
+
+.info-box h3::after {
+
+    content: "";
+
+    display: block;
+
+    width: 45px;
+
+    height: 3px;
+
+    background: #c8102e;
+
+    margin-top: 9px;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMATION TEXT
+   --------------------------------------------------------- */
+
+.info-box p {
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.info-box .important {
+
+    color: #222;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   SKILLS
+   --------------------------------------------------------- */
+
+.skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.skills span {
+
+    background: #292929;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    border-left: 3px solid #c8102e;
+
+    border-radius: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   CONTACT
+   --------------------------------------------------------- */
+
+.contact-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 35px 55px;
+
+    background: #c8102e;
+
+    color: white;
+}
+
+
+.contact-label {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 4px;
+
+    color: #ffd9dc;
+}
+
+
+.contact-section h2 {
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+}
+
+
+.email-button {
+
+    display: inline-block;
+
+    background: white;
+
+    color: #c8102e;
+
+    padding: 14px 22px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.email-button:hover {
+
+    background: #eeeeee;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+footer {
+
+    background: #181818;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+.footer-logo {
+
+    color: #ed1c24;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 8px;
+}
+
+
+footer p {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #dddddd;
+}
+
+
+footer .footer-small {
+
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    color: #777;
+
+    letter-spacing: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE DESIGN
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    body {
+
+        padding: 20px 10px;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 25px;
+
+        gap: 25px;
+
+    }
+
+
+    .hero-logo {
+
+        width: 150px;
+        height: 150px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .school-name {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .red-line {
+
+        margin: 15px auto;
+
+    }
+
+
+    .student-title {
+
+        font-size: 12px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .profile-section {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 25px;
+
+    }
+
+
+    .intro {
+
+        max-width: 100%;
+
+    }
+
+
+    .information-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .info-box {
+
+        min-height: auto;
+
+        padding: 30px;
+
+    }
+
+
+    .contact-section {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+
+    }
+
+
+    .email-button {
+
+        width: 100%;
+
+        overflow-wrap: anywhere;
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   TEXT SELECTION
+   --------------------------------------------------------- */
+
+::selection {
+
+    background: #c8102e;
+
+    color: white;
+
+}
